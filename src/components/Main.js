@@ -19,15 +19,10 @@ imagesData = (function generateImageURL(imagesDataArr) {
 class AppComponent extends React.Component {
   render() {
     return (
-      //舞台
       <section className="stage">
-        {/*图片区域*/}
         <section className="img-sec">
-
         </section>
-        {/*控制条*/}
         <nav className="controller-nav">
-
         </nav>
       </section>
     );
