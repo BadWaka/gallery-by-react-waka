@@ -8,9 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-  <div id="app">APPLICATION CONTENT</div>
+<div id="app">APPLICATION CONTENT</div>
 
-  <script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
-  <script type="text/javascript" src="/assets/app.js"></script>
+<script>
+  //手动定义__REACT_DEVTOOLS_GLOBAL_HOOK__
+  //因为__REACT_DEVTOOLS_GLOBAL_HOOK__是Chrome ReactDev工具的全局变量，是ReactDev与网页通信的bridge，而在iframe中外层的__REACT_DEVTOOLS_GLOBAL_HOOK__不生效，所以需要手动定义
+  __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+</script>
+<script type="text/javascript" src="/assets/app.js"></script>
 </body>
 </html>
