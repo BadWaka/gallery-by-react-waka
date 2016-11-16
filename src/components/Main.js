@@ -16,13 +16,16 @@ imagesData = (function generateImageURL(imagesDataArr) {
   return imagesDataArr;
 })(imagesData);
 
+/**
+ * 图片组件
+ */
 class ImageFigure extends React.Component {
   render() {
     return (
-      <figure>
-        <img/>
+      <figure className="img-figure">
+        <img className="img-photo" src={this.props.data.imageURL} alt={this.props.data.title}/>
         <figcaption>
-          <h2></h2>
+          <h2 className="img-title">{this.props.data.title}</h2>
         </figcaption>
       </figure>
     );
