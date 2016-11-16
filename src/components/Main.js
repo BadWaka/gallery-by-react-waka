@@ -33,6 +33,15 @@ class ImageFigure extends React.Component {
 }
 
 class AppComponent extends React.Component {
+
+  static Constant = {
+    centerPos: {
+      left: 0,
+      right: 0
+    }
+
+  };
+
   render() {
 
     let controllerUnits = [],//控制单元数组
