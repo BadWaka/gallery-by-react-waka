@@ -16,14 +16,36 @@ imagesData = (function generateImageURL(imagesDataArr) {
   return imagesDataArr;
 })(imagesData);
 
+class ImageFigure extends React.Component {
+  render() {
+    return (
+      <figure>
+        <img/>
+        <figcaption>
+          <h2></h2>
+        </figcaption>
+      </figure>
+    );
+  }
+}
+
 class AppComponent extends React.Component {
   render() {
+
+    let controllerUnits = [],//控制单元数组
+      imageFigures = [];//图片数组
+
+    imagesData.forEach(function (imageData) {
+      imageFigures.push(<ImageFigure data={imageData}/>);
+    });
+
     return (
       <section className="stage">
         <section className="img-sec">
+          {imageFigures}
         </section>
         <nav className="controller-nav">
-          dsfdsf
+          {controllerUnits}
         </nav>
       </section>
     );
