@@ -2,81 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804e22c3-f829-4c9a-a618-e163e11d4915" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/gallery-by-react-waka.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.yo-rc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/defaults.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/dev.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/dist.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/022e19b599c3c86672dd5a6d5ea441c9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/0a70d552ad924fbb877393cc5b32b057.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/2e0d0edb84eac68dcb65ea20200299b3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/2f29fd0c7f7070f17f130885a58913ee.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/42092f929161dae9c08a21bfb46ece4d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/624ceeafa6972fe0012b7e0e9b12a740.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/64168d300dadb544d1db47bee1bc1c2c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/7396a190e8f0b2b5a5ee5251513bc5ec.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/926b941be092db0babf55bb6a356b246.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/a474394755f18677de5bf728a870df5a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/app.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/b2479b76412aec7453dc84b3913df8a4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/b3525ffbf10843778add27d279784b53.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/e1ace38804e308c660453a68f590634e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/ea623be5d65cc0334b8ce9ae38751eef.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/assets/fefe04d5f8417ace783774dd40514eb1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/dev.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/dist.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/imagesData.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sources/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/stores/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/styles/App.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/actions/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/MainTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/config/ConfigTest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/helpers/shallowRenderHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/loadtests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/sources/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/stores/.keep" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.babelrc" afterPath="$PROJECT_DIR$/.babelrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="154">
+              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="638">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -214,11 +153,11 @@
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/app/main.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/styles/app.scss" />
         <option value="$PROJECT_DIR$/app/components/AppComponent.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -244,7 +183,9 @@
     <option name="width" value="1280" />
     <option name="height" value="1350" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -296,6 +237,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -372,12 +314,12 @@
       <updated>1479550873935</updated>
       <workItem from="1479550875237" duration="9547000" />
       <workItem from="1479567309414" duration="2206000" />
-      <workItem from="1479569742185" duration="231000" />
+      <workItem from="1479569742185" duration="420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11984000" />
+    <option name="totallyTimeSpent" value="12173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="1350" extended-state="0" />
@@ -569,14 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -618,15 +552,31 @@
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="154">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
