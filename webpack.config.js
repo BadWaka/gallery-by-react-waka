@@ -1,32 +1,62 @@
-'use strict';
-
-const path = require('path');
-const args = require('minimist')(process.argv.slice(2));
-
-// List of allowed environments
-const allowedEnvs = ['dev', 'dist', 'test'];
-
-// Set the correct environment
-let env;
-if (args._.length > 0 && args._.indexOf('start') !== -1) {
-  env = 'test';
-} else if (args.env) {
-  env = args.env;
-} else {
-  env = 'dev';
-}
-process.env.REACT_WEBPACK_ENV = env;
-
 /**
- * Build the webpack configuration
- * @param  {String} wantedEnv The wanted environment
- * @return {Object} Webpack config
+ * Created by BadWaka on 19/11/2016.
  */
-function buildConfig(wantedEnv) {
-  let isValid = wantedEnv && wantedEnv.length > 0 && allowedEnvs.indexOf(wantedEnv) !== -1;
-  let validEnv = isValid ? wantedEnv : 'dev';
-  let config = require(path.join(__dirname, 'cfg/' + validEnv));
-  return config;
-}
+let webpack = require('webpack');
 
-module.exports = buildConfig(env);
+module.exports = {
+    devtool: 'eval-source-map',
+    entry: ['webpack/hot/dev-server', __dirname + '/app/main.js'], //入口文件
+    output: {
+        path: __dirname + '/build',
+        filename: 'bundle.js'
+    },
+
+    module: {
+        loaders: [
+
+            //js jsx loader
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            },
+
+            //sass loader
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
+            },
+
+            //json loader
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+
+            //url loader
+            {
+                test: /\.(png|jpg|gif|woff|woff2)$/,
+                loader: 'url-loader?limit=8192'
+            },
+
+            //file loader
+            {
+                test: /\.(mp4|ogg|svg)$/,
+                loader: 'file-loader'
+            }
+        ]
+    },
+
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()//热模块替换插件
+    ],
+
+    //webpack-dev-server
+    devServer: {
+        contentBase: './build',
+        colors: true,
+        inline: true,
+        port: 8080,
+        process: true
+    }
+};
