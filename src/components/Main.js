@@ -17,12 +17,30 @@ imagesData = (function generateImageURL(imagesDataArr) {
 })(imagesData);
 
 /**
+ * 获取区间内的一个随机值
+ * @param min
+ * @param max
+ */
+function getRangeRandom(min, max) {
+  return Math.ceil(Math.random() * (max - min) + min);
+}
+
+/**
  * 图片组件
  */
 class ImageFigure extends React.Component {
   render() {
+
+    //样式对象
+    let styleObj = {};
+
+    //如果props属性中指定了这张图片的位置，则使用
+    if (this.props.arrange.pos) {
+      styleObj = this.props.arrange.pos;
+    }
+
     return (
-      <figure className="img-figure">
+      <figure className="img-figure" style={styleObj}>
         <img className="img-photo" src={this.props.data.imageURL} alt={this.props.data.title}/>
         <figcaption>
           <h2 className="img-title">{this.props.data.title}</h2>
@@ -40,6 +58,8 @@ class AppComponent extends React.Component {
    */
   constructor(props) {
     super(props);
+
+    //常量，全部初始化为0
     this.constant = {
       centerPos: { //中心图片的位置点
         left: 0,
@@ -55,7 +75,10 @@ class AppComponent extends React.Component {
         x: [0, 0]
       }
     };
+
+    //状态
     this.state = {
+      //图片状态数组
       imgsArrangeArr: [
         /*{
          pos: {
@@ -115,6 +138,66 @@ class AppComponent extends React.Component {
    * @param centerIndex 指定居中排布哪个图片
    */
   rearrange(centerIndex) {
+    let imgsArrangeArr = this.state.imgsArrangeArr,
+      constant = this.constant,
+      centerPos = constant.centerPos,
+      hPosRange = constant.hPosRange,
+      vPosRange = constant.vPosRange,
+      hPosRangeLeftSecX = hPosRange.leftSecX,
+      hPosRangeRightSecX = hPosRange.rightSecX,
+      hPosRangeY = hPosRange.y,
+      vPosRangeTopSecY = vPosRange.topSecY,
+      vPosRangeX = vPosRange.x,
+      imgsArrangeTopArr = [],//上侧布局图片数组
+      topImgNum = Math.ceil(Math.random() * 2),//上侧布局图片的数量,取一个或者不取
+      topImgSpliceIndex = 0,//用来标记上面的图片是从数组对象的哪个位置拿出来的
+      imgsArrangeCenterArr = imgsArrangeArr.splice(centerIndex, 1);//中心图片，拿到中心图片的状态
+
+    //首先居中 centerIndex 的图片
+    imgsArrangeCenterArr[0].pos = centerPos;
+
+    //取出要布局上侧的图片的状态信息
+    topImgSpliceIndex = Math.ceil(Math.random() * (imgsArrangeArr.length - topImgNum));
+    imgsArrangeTopArr = imgsArrangeArr.splice(topImgSpliceIndex, topImgNum);
+
+    //布局位于上侧的图片
+    imgsArrangeTopArr.forEach(function (value, index) {
+      imgsArrangeTopArr[index].pos = {
+        top: getRangeRandom(vPosRangeTopSecY[0], vPosRangeTopSecY[1]),
+        left: getRangeRandom(vPosRangeX[0], vPosRangeX[1])
+      }
+    });
+
+    //布局左右两侧的图片
+    for (let i = 0; i < imgsArrangeArr.length; i++) {
+      let halfLength = imgsArrangeArr.length / 2;//数组的一半
+      let hPosRangeLeftOrRightX = null;
+
+      //前半部分布局在左边，右半部分布局在右边
+      if (i < halfLength) {
+        hPosRangeLeftOrRightX = hPosRangeLeftSecX;
+      } else {
+        hPosRangeLeftOrRightX = hPosRangeRightSecX;
+      }
+
+      imgsArrangeArr[i].pos = {
+        top: getRangeRandom(hPosRangeY[0], hPosRange[1]),
+        left: getRangeRandom(hPosRangeLeftOrRightX[0], hPosRangeLeftOrRightX[1])
+      }
+    }
+
+    //把上方图片塞回原数组中
+    if (imgsArrangeTopArr && imgsArrangeTopArr[0]) {
+      imgsArrangeArr.splice(topImgSpliceIndex, 0, imgsArrangeTopArr[0]);
+    }
+
+    //把中心图片也塞回原数组中
+    imgsArrangeArr.splice(centerIndex, 0, imgsArrangeCenterArr[0]);
+
+    //重新设置state，让React重新渲染UI
+    this.setState({
+      imgsArrangeArr: imgsArrangeArr
+    });
 
   }
 
@@ -127,8 +210,20 @@ class AppComponent extends React.Component {
       imageFigures = [];//图片数组
 
     imagesData.forEach(function (imageData, index) {
-      imageFigures.push(<ImageFigure data={imageData} ref={'imageFigure' + index}/>);
-    });
+
+      //容错处理，如果没有状态，则初始化一个值
+      if (!this.state.imgsArrangeArr[index]) {
+        this.state.imgsArrangeArr[index] = {
+          pos: {
+            left: 0,
+            right: 0
+          }
+        }
+      }
+
+      imageFigures.push(<ImageFigure data={imageData} ref={'imageFigure' + index}
+                                     arrange={this.state.imgsArrangeArr[index]}/>);
+    }.bind(this));//把React Component绑定到React中，这样既可在forEach中直接引用
 
     return (
       <section className="stage" ref="stage">
