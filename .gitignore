@@ -1,8 +1,5 @@
 # Dependency directory
 node_modules
 
-# Compiled
-build
-
 # Webstorm
 .idea
