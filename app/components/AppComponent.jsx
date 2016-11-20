@@ -104,6 +104,25 @@ class ImageFigure extends React.Component {
     }
 }
 
+/**
+ * 控制组件
+ */
+class ControllerUnit extends React.Component {
+    handleClick(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+
+    render() {
+        return (
+            <span className="controller-unit is-center" onClick={this.handleClick.bind(this)}></span>
+        );
+    }
+}
+
+/**
+ * 整个App
+ */
 class AppComponent extends React.Component {
 
     /**
@@ -322,9 +341,14 @@ class AppComponent extends React.Component {
                 // console.log("初始化赋值 index = " + index + " obj = " + JSON.stringify(this.state.imgsArrangeArr[index]));
             }
 
+            //填充图片数组
             imageFigures.push(<ImageFigure key={index} data={imageData} ref={'imageFigure' + index}
                                            arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)}
                                            center={this.center(index)}/>);
+
+            //填充控制单元数组
+            controllerUnits.push(<ControllerUnit/>);
+
         }.bind(this));//把React Component绑定到React中，这样既可在forEach中直接引用
 
         return (
