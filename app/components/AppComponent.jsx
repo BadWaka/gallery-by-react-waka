@@ -109,13 +109,33 @@ class ImageFigure extends React.Component {
  */
 class ControllerUnit extends React.Component {
     handleClick(e) {
+
+        //如果点击的是当前正在选中态的按钮，则翻转图片；否则将对应的图片居中
+        if (this.props.arrange.isCenter) {
+            this.props.inverse();
+        } else {
+            this.props.center();
+        }
+
         e.stopPropagation();
         e.preventDefault();
     }
 
     render() {
+        let controllerUnitClassName = 'controller-unit';
+
+        //如果对应的是居中的图片，显示控制按钮的居中态
+        if (this.props.arrange.isCenter) {
+            controllerUnitClassName += ' is-center';
+
+            //如果同时对应的是翻转图片，显示控制按钮的翻转态
+            if (this.props.arrange.isInverse) {
+                controllerUnitClassName += ' is-inverse';
+            }
+        }
+
         return (
-            <span className="controller-unit is-center" onClick={this.handleClick.bind(this)}></span>
+            <span className={controllerUnitClassName} onClick={this.handleClick.bind(this)}/>
         );
     }
 }
@@ -291,6 +311,8 @@ class AppComponent extends React.Component {
             }
         }
 
+        debugger;
+
         //把上方图片塞回原数组中
         console.log("上方图片数组 imgsArrangeTopArr = " + JSON.stringify(imgsArrangeTopArr));
         imgsArrangeTopArr.forEach(function (imgsArrange) {
@@ -347,7 +369,8 @@ class AppComponent extends React.Component {
                                            center={this.center(index)}/>);
 
             //填充控制单元数组
-            controllerUnits.push(<ControllerUnit/>);
+            controllerUnits.push(<ControllerUnit arrange={this.state.imgsArrangeArr[index]}
+                                                 inverse={this.inverse(index)} center={this.center(index)}/>);
 
         }.bind(this));//把React Component绑定到React中，这样既可在forEach中直接引用
 
